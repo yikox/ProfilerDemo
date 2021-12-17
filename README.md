@@ -15,5 +15,18 @@
 **问题：**
 
 1.   同样的代码，mali的GPU耗时相⽐⾼通多出很多倍，是什么原因？mali机型的适配优化有什么修改建议？
-2.   由于Adreno没有buffer的L1cache，mali的buffer应该比Adreno快，这里结果Adreno比较快？
 3.   行x行的内存连续性应该会比行x列和列x列好，这里行x行巨慢？
+
+
+### APK使用说明
+
+在根目录下有两个apk
+```
+app-release.apk
+app-debug.apk
+```
+安装到有maliGPU的手机上
+```
+adb install app-debug.apk
+```
+**单次点击**“行x行”、“行x列“、”列x列“按钮，运行完毕会出现运行的时间的弹窗提醒
